@@ -1,0 +1,7 @@
+[package]
+name = "native-wallet"
+version = "0.1.0"
+authors = ["debris <marek.kotewicz@gmail.com>"]
+
+[dependencies]
+ethstore = { git = "https://github.com/ethcore/parity", path = "ethstore" }

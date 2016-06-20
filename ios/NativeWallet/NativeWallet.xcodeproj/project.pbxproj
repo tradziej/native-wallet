@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA71A8681D1891C100300AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71A8671D1891C100300AEC /* AppDelegate.swift */; };
+		EA71A86A1D1891C100300AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71A8691D1891C100300AEC /* ViewController.swift */; };
+		EA71A86D1D1891C100300AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA71A86B1D1891C100300AEC /* Main.storyboard */; };
+		EA71A8701D1891C100300AEC /* NativeWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA71A86E1D1891C100300AEC /* NativeWallet.xcdatamodeld */; };
+		EA71A8721D1891C100300AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA71A8711D1891C100300AEC /* Assets.xcassets */; };
+		EA71A8751D1891C100300AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA71A8731D1891C100300AEC /* LaunchScreen.storyboard */; };
+		EA71A8801D1891C100300AEC /* NativeWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71A87F1D1891C100300AEC /* NativeWalletTests.swift */; };
+		EA71A88B1D1891C100300AEC /* NativeWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71A88A1D1891C100300AEC /* NativeWalletUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA71A87C1D1891C100300AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA71A85C1D1891C100300AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA71A8631D1891C100300AEC;
+			remoteInfo = NativeWallet;
+		};
+		EA71A8871D1891C100300AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA71A85C1D1891C100300AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA71A8631D1891C100300AEC;
+			remoteInfo = NativeWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA71A8641D1891C100300AEC /* NativeWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA71A8671D1891C100300AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA71A8691D1891C100300AEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA71A86C1D1891C100300AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA71A86F1D1891C100300AEC /* NativeWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NativeWallet.xcdatamodel; sourceTree = "<group>"; };
+		EA71A8711D1891C100300AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA71A8741D1891C100300AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA71A8761D1891C100300AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA71A87B1D1891C100300AEC /* NativeWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA71A87F1D1891C100300AEC /* NativeWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeWalletTests.swift; sourceTree = "<group>"; };
+		EA71A8811D1891C100300AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA71A8861D1891C100300AEC /* NativeWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA71A88A1D1891C100300AEC /* NativeWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeWalletUITests.swift; sourceTree = "<group>"; };
+		EA71A88C1D1891C100300AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA71A8611D1891C100300AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA71A8781D1891C100300AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA71A8831D1891C100300AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA71A85B1D1891C100300AEC = {
+			isa = PBXGroup;
+			children = (
+				EA71A8661D1891C100300AEC /* NativeWallet */,
+				EA71A87E1D1891C100300AEC /* NativeWalletTests */,
+				EA71A8891D1891C100300AEC /* NativeWalletUITests */,
+				EA71A8651D1891C100300AEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA71A8651D1891C100300AEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA71A8641D1891C100300AEC /* NativeWallet.app */,
+				EA71A87B1D1891C100300AEC /* NativeWalletTests.xctest */,
+				EA71A8861D1891C100300AEC /* NativeWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA71A8661D1891C100300AEC /* NativeWallet */ = {
+			isa = PBXGroup;
+			children = (
+				EA71A8671D1891C100300AEC /* AppDelegate.swift */,
+				EA71A8691D1891C100300AEC /* ViewController.swift */,
+				EA71A86B1D1891C100300AEC /* Main.storyboard */,
+				EA71A8711D1891C100300AEC /* Assets.xcassets */,
+				EA71A8731D1891C100300AEC /* LaunchScreen.storyboard */,
+				EA71A8761D1891C100300AEC /* Info.plist */,
+				EA71A86E1D1891C100300AEC /* NativeWallet.xcdatamodeld */,
+			);
+			path = NativeWallet;
+			sourceTree = "<group>";
+		};
+		EA71A87E1D1891C100300AEC /* NativeWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA71A87F1D1891C100300AEC /* NativeWalletTests.swift */,
+				EA71A8811D1891C100300AEC /* Info.plist */,
+			);
+			path = NativeWalletTests;
+			sourceTree = "<group>";
+		};
+		EA71A8891D1891C100300AEC /* NativeWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA71A88A1D1891C100300AEC /* NativeWalletUITests.swift */,
+				EA71A88C1D1891C100300AEC /* Info.plist */,
+			);
+			path = NativeWalletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA71A8631D1891C100300AEC /* NativeWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA71A88F1D1891C100300AEC /* Build configuration list for PBXNativeTarget "NativeWallet" */;
+			buildPhases = (
+				EA71A8601D1891C100300AEC /* Sources */,
+				EA71A8611D1891C100300AEC /* Frameworks */,
+				EA71A8621D1891C100300AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativeWallet;
+			productName = NativeWallet;
+			productReference = EA71A8641D1891C100300AEC /* NativeWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA71A87A1D1891C100300AEC /* NativeWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA71A8921D1891C100300AEC /* Build configuration list for PBXNativeTarget "NativeWalletTests" */;
+			buildPhases = (
+				EA71A8771D1891C100300AEC /* Sources */,
+				EA71A8781D1891C100300AEC /* Frameworks */,
+				EA71A8791D1891C100300AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA71A87D1D1891C100300AEC /* PBXTargetDependency */,
+			);
+			name = NativeWalletTests;
+			productName = NativeWalletTests;
+			productReference = EA71A87B1D1891C100300AEC /* NativeWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA71A8851D1891C100300AEC /* NativeWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA71A8951D1891C100300AEC /* Build configuration list for PBXNativeTarget "NativeWalletUITests" */;
+			buildPhases = (
+				EA71A8821D1891C100300AEC /* Sources */,
+				EA71A8831D1891C100300AEC /* Frameworks */,
+				EA71A8841D1891C100300AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA71A8881D1891C100300AEC /* PBXTargetDependency */,
+			);
+			name = NativeWalletUITests;
+			productName = NativeWalletUITests;
+			productReference = EA71A8861D1891C100300AEC /* NativeWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA71A85C1D1891C100300AEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Marek Kotewicz";
+				TargetAttributes = {
+					EA71A8631D1891C100300AEC = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					EA71A87A1D1891C100300AEC = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = EA71A8631D1891C100300AEC;
+					};
+					EA71A8851D1891C100300AEC = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = EA71A8631D1891C100300AEC;
+					};
+				};
+			};
+			buildConfigurationList = EA71A85F1D1891C100300AEC /* Build configuration list for PBXProject "NativeWallet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA71A85B1D1891C100300AEC;
+			productRefGroup = EA71A8651D1891C100300AEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA71A8631D1891C100300AEC /* NativeWallet */,
+				EA71A87A1D1891C100300AEC /* NativeWalletTests */,
+				EA71A8851D1891C100300AEC /* NativeWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA71A8621D1891C100300AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA71A8751D1891C100300AEC /* LaunchScreen.storyboard in Resources */,
+				EA71A8721D1891C100300AEC /* Assets.xcassets in Resources */,
+				EA71A86D1D1891C100300AEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA71A8791D1891C100300AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA71A8841D1891C100300AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA71A8601D1891C100300AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA71A86A1D1891C100300AEC /* ViewController.swift in Sources */,
+				EA71A8701D1891C100300AEC /* NativeWallet.xcdatamodeld in Sources */,
+				EA71A8681D1891C100300AEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA71A8771D1891C100300AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA71A8801D1891C100300AEC /* NativeWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA71A8821D1891C100300AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA71A88B1D1891C100300AEC /* NativeWalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA71A87D1D1891C100300AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA71A8631D1891C100300AEC /* NativeWallet */;
+			targetProxy = EA71A87C1D1891C100300AEC /* PBXContainerItemProxy */;
+		};
+		EA71A8881D1891C100300AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA71A8631D1891C100300AEC /* NativeWallet */;
+			targetProxy = EA71A8871D1891C100300AEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA71A86B1D1891C100300AEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA71A86C1D1891C100300AEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA71A8731D1891C100300AEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA71A8741D1891C100300AEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA71A88D1D1891C100300AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA71A88E1D1891C100300AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA71A8901D1891C100300AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NativeWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA71A8911D1891C100300AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NativeWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA71A8931D1891C100300AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NativeWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NativeWallet.app/NativeWallet";
+			};
+			name = Debug;
+		};
+		EA71A8941D1891C100300AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NativeWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NativeWallet.app/NativeWallet";
+			};
+			name = Release;
+		};
+		EA71A8961D1891C100300AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NativeWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NativeWallet;
+			};
+			name = Debug;
+		};
+		EA71A8971D1891C100300AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NativeWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NativeWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA71A85F1D1891C100300AEC /* Build configuration list for PBXProject "NativeWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA71A88D1D1891C100300AEC /* Debug */,
+				EA71A88E1D1891C100300AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA71A88F1D1891C100300AEC /* Build configuration list for PBXNativeTarget "NativeWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA71A8901D1891C100300AEC /* Debug */,
+				EA71A8911D1891C100300AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA71A8921D1891C100300AEC /* Build configuration list for PBXNativeTarget "NativeWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA71A8931D1891C100300AEC /* Debug */,
+				EA71A8941D1891C100300AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA71A8951D1891C100300AEC /* Build configuration list for PBXNativeTarget "NativeWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA71A8961D1891C100300AEC /* Debug */,
+				EA71A8971D1891C100300AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA71A86E1D1891C100300AEC /* NativeWallet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA71A86F1D1891C100300AEC /* NativeWallet.xcdatamodel */,
+			);
+			currentVersion = EA71A86F1D1891C100300AEC /* NativeWallet.xcdatamodel */;
+			path = NativeWallet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EA71A85C1D1891C100300AEC /* Project object */;
+}
