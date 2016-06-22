@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		let ethstore = EthStore(path: NSTemporaryDirectory())
+		let accounts = ethstore.accounts()
+
+		print(accounts.map({ (acc) -> String in
+			acc.asString()
+		}).joinWithSeparator(","))
+
 		// Override point for customization after application launch.
 		return true
 	}

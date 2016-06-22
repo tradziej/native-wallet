@@ -4,4 +4,9 @@ version = "0.1.0"
 authors = ["debris <marek.kotewicz@gmail.com>"]
 
 [dependencies]
+libc = "0.2"
 ethstore = { git = "https://github.com/ethcore/parity", path = "ethstore" }
+
+[lib]
+name = "native_wallet"
+crate-type = ["staticlib"]

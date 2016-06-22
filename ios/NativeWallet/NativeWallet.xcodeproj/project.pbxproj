@@ -15,6 +15,8 @@
 		EA71A8751D1891C100300AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA71A8731D1891C100300AEC /* LaunchScreen.storyboard */; };
 		EA71A8801D1891C100300AEC /* NativeWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71A87F1D1891C100300AEC /* NativeWalletTests.swift */; };
 		EA71A88B1D1891C100300AEC /* NativeWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71A88A1D1891C100300AEC /* NativeWalletUITests.swift */; };
+		EAD7157F1D189C430085ED27 /* libnative_wallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD7157C1D189BC30085ED27 /* libnative_wallet.a */; };
+		EAD715841D18A7610085ED27 /* EthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD715831D18A7610085ED27 /* EthStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		EA71A8861D1891C100300AEC /* NativeWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA71A88A1D1891C100300AEC /* NativeWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeWalletUITests.swift; sourceTree = "<group>"; };
 		EA71A88C1D1891C100300AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD7157C1D189BC30085ED27 /* libnative_wallet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnative_wallet.a; path = "../../rust/native-wallet/libnative_wallet.a"; sourceTree = "<group>"; };
+		EAD7157D1D189BC30085ED27 /* native_wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = native_wallet.h; path = "../../rust/native-wallet/native_wallet.h"; sourceTree = "<group>"; };
+		EAD715801D189EAA0085ED27 /* NativeWallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeWallet-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAD715831D18A7610085ED27 /* EthStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD7157F1D189C430085ED27 /* libnative_wallet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +86,9 @@
 		EA71A85B1D1891C100300AEC = {
 			isa = PBXGroup;
 			children = (
+				EAD7157C1D189BC30085ED27 /* libnative_wallet.a */,
+				EAD7157D1D189BC30085ED27 /* native_wallet.h */,
+				EAD715801D189EAA0085ED27 /* NativeWallet-Bridging-Header.h */,
 				EA71A8661D1891C100300AEC /* NativeWallet */,
 				EA71A87E1D1891C100300AEC /* NativeWalletTests */,
 				EA71A8891D1891C100300AEC /* NativeWalletUITests */,
@@ -101,6 +111,7 @@
 			children = (
 				EA71A8671D1891C100300AEC /* AppDelegate.swift */,
 				EA71A8691D1891C100300AEC /* ViewController.swift */,
+				EAD715831D18A7610085ED27 /* EthStore.swift */,
 				EA71A86B1D1891C100300AEC /* Main.storyboard */,
 				EA71A8711D1891C100300AEC /* Assets.xcassets */,
 				EA71A8731D1891C100300AEC /* LaunchScreen.storyboard */,
@@ -138,6 +149,7 @@
 				EA71A8601D1891C100300AEC /* Sources */,
 				EA71A8611D1891C100300AEC /* Frameworks */,
 				EA71A8621D1891C100300AEC /* Resources */,
+				EAD7157B1D189B130085ED27 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,6 +266,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EAD7157B1D189B130085ED27 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../../rust/native-wallet\nmake";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA71A8601D1891C100300AEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +289,7 @@
 			files = (
 				EA71A86A1D1891C100300AEC /* ViewController.swift in Sources */,
 				EA71A8701D1891C100300AEC /* NativeWallet.xcdatamodeld in Sources */,
+				EAD715841D18A7610085ED27 /* EthStore.swift in Sources */,
 				EA71A8681D1891C100300AEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,10 +434,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "../../rust/native-wallet";
 				INFOPLIST_FILE = NativeWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "../../rust/native-wallet";
 				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeWallet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -416,10 +450,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "../../rust/native-wallet";
 				INFOPLIST_FILE = NativeWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "../../rust/native-wallet";
 				PRODUCT_BUNDLE_IDENTIFIER = test.com.test.NativeWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeWallet-Bridging-Header.h";
 			};
 			name = Release;
 		};
