@@ -4,8 +4,9 @@ extern crate ethstore;
 mod accounts;
 mod string;
 
-use ethstore::dir::DiskDirectory;
 use ethstore::{EthStore, SecretStore};
+use ethstore::dir::DiskDirectory;
+use ethstore::ethkey::{Generator, Random, Address};
 
 use accounts::AccountsPtr;
 use string::StringPtr;
@@ -34,15 +35,8 @@ pub unsafe extern fn ethstore_destroy(store: *mut EthStore) {
 
 #[no_mangle]
 pub unsafe extern fn ethstore_accounts(store: *mut EthStore) -> *const AccountsPtr {
-	use ethstore::ethkey::Address;
-	use std::str::FromStr;
-
 	let store = Box::from_raw(store);
 	let accounts = store.accounts();
-	//let accounts = vec![
-		//Address::from_str("5b073e9233944b5e729e46d618f0d8edf3d9c34a").unwrap(),
-		//Address::from_str("5b073e9233944b5e729e46d618f0d8edf3d9c34c").unwrap()
-	//];
 	let result = AccountsPtr::from(accounts);
 	let _ = Box::into_raw(store);
 	Box::into_raw(Box::new(result))
@@ -52,6 +46,24 @@ pub unsafe extern fn ethstore_accounts(store: *mut EthStore) -> *const AccountsP
 pub unsafe extern fn ethstore_accounts_destroy(accounts: *mut AccountsPtr) {
 	let accounts = Box::from_raw(accounts);
 	accounts.drop_ptr();
+}
+
+#[no_mangle]
+pub unsafe extern fn ethstore_account_new_random(store: *mut EthStore, password: *mut StringPtr) -> *const Address {
+	let store = Box::from_raw(store);
+	let password = Box::from_raw(password);
+
+	let kp = Random.generate().unwrap();
+	let address = store.insert_account(kp.secret().clone(), password.as_str()).unwrap();
+
+	let _ = Box::into_raw(store);
+	let _ = Box::into_raw(password);
+	Box::into_raw(Box::new(address))
+}
+
+#[no_mangle]
+pub unsafe extern fn ethstore_account_destroy(account: *mut Address) {
+	let _ = Box::from_raw(account);
 }
 
 #[test]
