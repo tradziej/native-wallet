@@ -2,43 +2,45 @@
 //  RootViewController.swift
 //  NativeWallet
 //
-//  Created by Marek Kotewicz on 20/06/16.
+//  Created by Marek Kotewicz on 04/07/16.
 //  Copyright © 2016 Marek Kotewicz. All rights reserved.
 //
 
 import UIKit
+import SideMenu
 
-class RootViewController: UITableViewController {
-	let ethstore: EthStore
-	var accounts: [Account]
-	
-	required init?(coder aDecoder: NSCoder) {
-		self.ethstore = EthStore(path: NSTemporaryDirectory())
-		self.accounts = self.ethstore.accounts()
-		super.init(coder: aDecoder)
-	}
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-	}
+class RootViewController: UIViewController {
+	@IBOutlet weak var container: UIView!
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-	}
-	
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.accounts.count
-	}
-	
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! AccountTableViewCell
-		cell.addressLabel!.text = self.accounts[indexPath.row].asString()
-		return cell
-	}
-	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//		self.performSegueWithIdentifier(self.rows[indexPath.row], sender: nil)
-	}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+		SideMenuManager.menuLeftNavigationController = storyboard!.instantiateViewControllerWithIdentifier("SideMenuNavigationController") as? UISideMenuNavigationController
+		
+		SideMenuManager.menuRightNavigationController = nil
+		//		SideMenuManager.menuAnimationBackgroundColor = UIColor(red: 24.0/255, green: 23.0/255, blue: 29.0/255, alpha: 1)
+		SideMenuManager.menuAnimationBackgroundColor = UIColor(red: 36.0/255, green: 35.0/255, blue: 41.0/255, alpha: 1)
+		SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+		SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+		SideMenuManager.menuPresentMode = .ViewSlideInOut
+		SideMenuManager.menuAnimationTransformScaleFactor = 0.8
+		SideMenuManager.menuAnimationFadeStrength = 0.8
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
-
