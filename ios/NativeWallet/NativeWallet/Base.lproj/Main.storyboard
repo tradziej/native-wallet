@@ -145,7 +145,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Transaction" id="dBC-Mc-s61">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="5xV-ob-BVw">
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="5xV-ob-BVw">
                             <connections>
                                 <segue destination="ihr-Lb-SVC" kind="presentation" id="YeI-cH-SkL"/>
                             </connections>
@@ -263,7 +263,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="aaR-5t-NU5" kind="relationship" relationship="rootViewController" id="VYH-nf-xqg"/>

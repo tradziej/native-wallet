@@ -15,9 +15,9 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		SideMenuManager.menuLeftNavigationController = storyboard!.instantiateViewControllerWithIdentifier("SideMenuNavigationController") as? UISideMenuNavigationController
+		SideMenuManager.menuRightNavigationController = storyboard!.instantiateViewControllerWithIdentifier("SideMenuNavigationController") as? UISideMenuNavigationController
 		
-		SideMenuManager.menuRightNavigationController = nil
+		SideMenuManager.menuLeftNavigationController = nil
 		//		SideMenuManager.menuAnimationBackgroundColor = UIColor(red: 24.0/255, green: 23.0/255, blue: 29.0/255, alpha: 1)
 		SideMenuManager.menuAnimationBackgroundColor = UIColor(red: 36.0/255, green: 35.0/255, blue: 41.0/255, alpha: 1)
 		SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
